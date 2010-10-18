@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>File: sixarm_ruby_defining.rb [sixarm_ruby_defining]</title>
+
+	<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+	<div id="metadata">
+		<dl>
+			<dt class="modified-date">Last Modified</dt>
+			<dd class="modified-date">2010-02-12 20:55:49 -0800</dd>
+
+			
+			<dt class="requires">Requires</dt>
+			<dd class="requires">
+				<ul>
+				
+				</ul>
+			</dd>
+			
+
+			
+		</dl>
+	</div>
+
+	<div id="documentation">
+		
+		<div class="description">
+			<h2>Description</h2>
+			<h1>SixArm Ruby Gem: <a href="../Class.html#M000000">Class#defining</a> and redefining metaprogramming methods</h1>
+<table>
+<tr><td valign="top">Author:</td><td>Joel Parker Henderson, joelparkerhenderson@gmail.com
+
+</td></tr>
+<tr><td valign="top">Copyright:</td><td>Copyright &#169; 2009-2010 Joel Parker Henderson
+
+</td></tr>
+<tr><td valign="top">Licenese:</td><td>CreativeCommons License, Non-commercial Share Alike
+
+</td></tr>
+<tr><td valign="top">License:</td><td>LGPL, GNU Lesser General Public License
+
+</td></tr>
+</table>
+<p>
+Meta-programming method that you call when you are defining a class method,
+to detect if your class may be accidentally overriding an existing method.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  require 'defining'
+
+  class MyClass
+
+    # raise an error if 'foo' is already a method
+    defining 'foo'
+
+    # raise an error if 'to_s' is NOT already a method
+    redefining 'to_s'
+
+    # you can check many names at once
+    defining 'foo', 'goo', 'hoo',
+    redefining 'to_s', 'equal?', 'clone'
+
+  end
+</pre>
+
+		</div>
+		
+	</div>
+</body>
+</html>
+

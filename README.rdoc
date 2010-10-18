@@ -1,0 +1,29 @@
+
+= SixArm Ruby Gem: Class#defining and #redefining metaprogramming methods
+
+Author:: Joel Parker Henderson, joelparkerhenderson@gmail.com
+Copyright:: Copyright (c) 2009-2010 Joel Parker Henderson
+Licenese:: CreativeCommons License, Non-commercial Share Alike
+License:: LGPL, GNU Lesser General Public License
+
+Meta-programming method that you call when you are defining
+a class method, to detect if your class may be accidentally
+overriding an existing method.
+
+Example:
+  require 'defining'
+
+  class MyClass
+
+    # raise an error if 'foo' is already a method
+    defining 'foo'
+
+    # raise an error if 'to_s' is NOT already a method
+    redefining 'to_s'
+
+    # you can check many names at once
+    defining 'foo', 'goo', 'hoo', 
+    redefining 'to_s', 'equal?', 'clone'
+
+  end
+

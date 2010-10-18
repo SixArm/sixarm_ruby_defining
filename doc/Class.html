@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Class</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/sixarm_ruby_defining_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sixarm_ruby_defining.rb">lib/sixarm_ruby_defining.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000000">#defining</a></li>
+					
+					<li><a href="#M000007">#defining_failure</a></li>
+					
+					<li><a href="#M000006">#defining_success</a></li>
+					
+					<li><a href="#M000011">#redefining</a></li>
+					
+					<li><a href="#M000013">#redefining_failure</a></li>
+					
+					<li><a href="#M000012">#redefining_success</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./LICENSE_txt.html">LICENSE.txt</a></li>
+				
+					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+				
+					<li class="file"><a href="./sixarm_ruby_defining_gemspec.html">sixarm_ruby_defining.gemspec</a></li>
+				
+					<li class="file"><a href="./sixarm_ruby_defining_sha512_txt.html">sixarm_ruby_defining.sha512.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Class.html">Class</a></li>
+				
+					<li><a href="./Testing.html">Testing</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Class</h1>
+
+		<div id="description">
+			<h1>SixArm Ruby Gem: <a href="Class.html#M000000">Class#defining</a> and <a href="Class.html#M000011">redefining</a> metaprogramming methods</h1>
+<table>
+<tr><td valign="top">Author:</td><td>Joel Parker Henderson, joelparkerhenderson@gmail.com
+
+</td></tr>
+<tr><td valign="top">Copyright:</td><td>Copyright &#169; 2009-2010 Joel Parker Henderson
+
+</td></tr>
+<tr><td valign="top">Licenese:</td><td>CreativeCommons License, Non-commercial Share Alike
+
+</td></tr>
+<tr><td valign="top">License:</td><td>LGPL, GNU Lesser General Public License
+
+</td></tr>
+</table>
+<p>
+Meta-programming method that you call when you are defining a class method,
+to detect if your class may be accidentally overriding an existing method.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  require 'defining'
+
+  class MyClass
+
+    # raise an error if 'foo' is already a method
+    defining 'foo'
+
+    # raise an error if 'to_s' is NOT already a method
+    redefining 'to_s'
+
+    # you can check many names at once
+    defining 'foo', 'goo', 'hoo',
+    redefining 'to_s', 'equal?', 'clone'
+
+  end
+</pre>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="defining-method" class="method-detail ">
+				<a name="M000000"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">defining</span><span
+						class="method-args">(*method_names)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+To protect your code, call this just before you define a new method.
+</p>
+<h2>Example</h2>
+<pre>
+  class MyClass
+    defining :foo
+    def foo
+      &quot;hello world&quot;
+    end
+  end
+</pre>
+<p>
+See <a href="Class.html#M000011">redefining</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="defining-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sixarm_ruby_defining.rb, line 48</span>
+48:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">defining</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">method_names</span>)
+49:     [<span class="ruby-operator">*</span><span class="ruby-identifier">method_names</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span>
+50:       <span class="ruby-operator">!</span><span class="ruby-identifier">method_defined?</span>(<span class="ruby-identifier">m</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">defining_success</span>(<span class="ruby-identifier">m</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">defining_failure</span>(<span class="ruby-identifier">m</span>)
+51:     }
+52:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="defining-failure-method" class="method-detail ">
+				<a name="M000007"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">defining_failure</span><span
+						class="method-args">(method_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Called when <a href="Class.html#M000000">defining</a> sees that you are
+creating a method that already exists.
+</p>
+<p>
+This method raises an error with a diagnostic message.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="defining-failure-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sixarm_ruby_defining.rb, line 68</span>
+68:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">defining_failure</span>(<span class="ruby-identifier">method_name</span>)
+69:     <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Class#defining expects '#{method_name}' to be a new method, but it already exists: #{self}##{method_name}&quot;</span> 
+70:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="defining-success-method" class="method-detail ">
+				<a name="M000006"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">defining_success</span><span
+						class="method-args">(method_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Called when <a href="Class.html#M000000">defining</a> sees that you are
+creating a new method.
+</p>
+<p>
+This method is blank; you can override it if you want to provide features
+like logging, coverage analysis, reporting, etc.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="defining-success-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sixarm_ruby_defining.rb, line 60</span>
+60:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">defining_success</span>(<span class="ruby-identifier">method_name</span>)
+61:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="redefining-method" class="method-detail ">
+				<a name="M000011"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">redefining</span><span
+						class="method-args">(*method_names)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+To protect your code, call this just before you redefine an existing
+method.
+</p>
+<h2>Example</h2>
+<pre>
+  class MyClass
+    redefining :to_s
+    def to_s
+      &quot;hello world&quot;
+    end
+  end
+</pre>
+<p>
+See <a href="Class.html#M000011">redefining</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="redefining-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sixarm_ruby_defining.rb, line 85</span>
+85:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">redefining</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">method_names</span>)
+86:     [<span class="ruby-operator">*</span><span class="ruby-identifier">method_names</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> 
+87:       <span class="ruby-identifier">method_defined?</span>(<span class="ruby-identifier">m</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">redefining_success</span>(<span class="ruby-identifier">m</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">redefining_failure</span>(<span class="ruby-identifier">m</span>) 
+88:     }
+89:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="redefining-failure-method" class="method-detail ">
+				<a name="M000013"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">redefining_failure</span><span
+						class="method-args">(method_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Called when <a href="Class.html#M000011">redefining</a> sees that you are
+creating a method that doesn&#8217;t exist.
+</p>
+<p>
+This method raises an error with a diagnostic message.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="redefining-failure-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sixarm_ruby_defining.rb, line 105</span>
+105:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">redefining_failure</span>(<span class="ruby-identifier">method_name</span>)
+106:     <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Class#redefining expects '#{method_name}' to be overriding an existing method, but it doesn't exist&quot;</span>
+107:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="redefining-success-method" class="method-detail ">
+				<a name="M000012"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">redefining_success</span><span
+						class="method-args">(method_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Called when <a href="Class.html#M000011">redefining</a> sees that you are
+overriding an existing method.
+</p>
+<p>
+This method is blank; you can override it if you want to provide features
+like logging, coverage analysis, reporting, etc.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="redefining-success-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sixarm_ruby_defining.rb, line 97</span>
+97:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">redefining_success</span>(<span class="ruby-identifier">method_name</span>)
+98:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+
