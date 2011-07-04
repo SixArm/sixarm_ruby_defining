@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 =begin rdoc
 
 = SixArm Ruby Gem: Class#defining and #redefining metaprogramming methods
@@ -23,7 +25,7 @@ Example:
     redefining 'to_s'
 
     # you can check many names at once
-    defining 'foo', 'goo', 'hoo', 
+    defining 'foo', 'goo', 'hoo',
     redefining 'to_s', 'equal?', 'clone'
 
   end
@@ -37,7 +39,7 @@ class Class
   #
   # ==Example
   #   class MyClass
-  #     defining :foo 
+  #     defining :foo
   #     def foo
   #       "hello world"
   #     end
@@ -66,7 +68,7 @@ class Class
   # This method raises an error with a diagnostic message.
 
   def defining_failure(method_name)
-    raise "Class#defining expects '#{method_name}' to be a new method, but it already exists: #{self}##{method_name}" 
+    raise "Class#defining expects '#{method_name}' to be a new method, but it already exists: #{self}##{method_name}"
   end
 
 
@@ -74,7 +76,7 @@ class Class
   #
   # ==Example
   #   class MyClass
-  #     redefining :to_s 
+  #     redefining :to_s
   #     def to_s
   #       "hello world"
   #     end
@@ -83,8 +85,8 @@ class Class
   # See #redefining
 
   def redefining(*method_names)
-    [*method_names].each{|m| 
-      method_defined?(m) ? redefining_success(m) : redefining_failure(m) 
+    [*method_names].each{|m|
+      method_defined?(m) ? redefining_success(m) : redefining_failure(m)
     }
   end
 
