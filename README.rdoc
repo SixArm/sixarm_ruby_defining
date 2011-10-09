@@ -1,10 +1,8 @@
+= SixArm.com » Ruby » Class#defining and #redefining metaprogramming methods
 
-= SixArm Ruby Gem: Class#defining and #redefining metaprogramming methods
-
-Author:: Joel Parker Henderson, joelparkerhenderson@gmail.com
-Copyright:: Copyright (c) 2009-2010 Joel Parker Henderson
-Licenese:: CreativeCommons License, Non-commercial Share Alike
-License:: LGPL, GNU Lesser General Public License
+Author:: Joel Parker Henderson, joel@joelparkerhenderson.com
+Copyright:: Copyright (c) 2009-2011 Joel Parker Henderson
+License:: See LICENSE.txt file
 
 Meta-programming method that you call when you are defining
 a class method, to detect if your class may be accidentally
