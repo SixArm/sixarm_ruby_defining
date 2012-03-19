@@ -112,13 +112,13 @@ We can intermix the methods however we like:
 
 For meta-programming we can customize what happens when #defining and #redefining encounter methods that are
 
-  * #defining_success: #defining calls this when a method name is not yet defined; this will return true.
+  * defining_success: called by #defining when a method name is not yet defined; this will return true.
 
-  * #defining_failure: #defining calls this when a method name is already defined; tihs will raise an error.
+  * defining_failure: called by #defining when a method name is already defined; tihs will raise an error.
 
-  * #redefining_success: #redefining calls this when a method name is already defined; this will return true.
+  * redefining_success: called by #redefining when a method name is already defined; this will return true.
 
-  * #redefining_failure: #redefining calls this when a method name is not yet defined; tihs will raise an error.
+  * redefining_failure: called by #redefining when a method name is not yet defined; tihs will raise an error.
 
    
 ## Changes
