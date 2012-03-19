@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
 
   s.name              = "sixarm_ruby_defining"
-  s.summary           = "SixArm Ruby Gem: Class#defining and Class#redfining methods to detect if you're creating a class method, or overriding"
-  s.version           = "1.0.6"
+  s.summary           = "SixArm.com » Ruby » Class#defining and Class#redfining methods to detect if you're creating a class method, or overriding"
+  s.version           = "1.1.0"
   s.author            = "SixArm"
   s.email             = "sixarm@sixarm.com"
   s.homepage          = "http://sixarm.com/"
@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.require_path      = 'lib'
   s.has_rdoc          = true
 
-  top_files           = [".gemtest", "CHANGELOG.txt", "INSTALL.txt", "LICENSE.txt", "Rakefile", "README.md", "VERSION"]
+  top_files           = [".gemtest", "Rakefile", "README.md", "VERSION"]
   lib_files           = ["lib/#{s.name}.rb"]
   test_files          = ["test/#{s.name}_test.rb"]
 
