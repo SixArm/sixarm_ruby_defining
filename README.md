@@ -45,7 +45,7 @@ Want to help? We're happy to get pull requests.
 
 
 
-## Quickstart
+## Install quickstart
 
 Install:
 
@@ -53,14 +53,14 @@ Install:
 
 Bundler:
 
-    gem "sixarm_ruby_defining", "=1.1.0"
+    gem "sixarm_ruby_defining", "~>1.1.0"
 
 Require:
 
     require "sixarm_ruby_defining"
 
 
-## Install with high security (optional)
+## Install with security (optional)
 
 To enable high security for all our gems:
 
