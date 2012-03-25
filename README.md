@@ -1,6 +1,7 @@
 # SixArm.com » Ruby » <br> Class#defining and #redefining metaprogramming methods
 
-* Docs: <http://sixarm.com/sixarm_ruby_defining/doc>
+* Doc: <http://sixarm.com/sixarm_ruby_defining/doc>
+* Gem: <http://rubygems.org/gems/sixarm_ruby_defining>
 * Repo: <http://github.com/sixarm/sixarm_ruby_defining>
 * Email: Joel Parker Henderson, <joel@sixarm.com>
 
