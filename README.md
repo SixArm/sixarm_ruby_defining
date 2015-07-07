@@ -122,7 +122,3 @@ For meta-programming we can customize what happens when #defining and #redefinin
   * redefining_failure: called by #redefining when a method name is not yet defined; tihs will raise an error.
 
    
-## Changes
-
-* 2012-03-17 1.1.0 Upgrade for Ruby 1.9.3, minitest/spec, and improved docs.
-* 2011-10-08 1.0.6 Updates for gem publishing
