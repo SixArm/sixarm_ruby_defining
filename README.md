@@ -3,7 +3,7 @@
 * Doc: <http://sixarm.com/sixarm_ruby_defining/doc>
 * Gem: <http://rubygems.org/gems/sixarm_ruby_defining>
 * Repo: <http://github.com/sixarm/sixarm_ruby_defining>
-* Email: Joel Parker Henderson, <joel@sixarm.com>
+<!--HEADER-SHUT-->
 
 
 ## Introduction
@@ -46,32 +46,29 @@ Want to help? We're happy to get pull requests.
 
 
 
-## Install quickstart
+<!--INSTALL-OPEN-->
 
-Install:
+## Install
 
-    gem install sixarm_ruby_defining
+To install using a Gemfile, add this:
 
-Bundler:
+    gem "sixarm_ruby_defining", ">= 1.1.1, < 2"
 
-    gem "sixarm_ruby_defining", "~>1.1.0"
+To install using the command line, run this:
 
-Require:
+    gem install sixarm_ruby_defining -v ">= 1.1.1, < 2"
+
+To install using the command with high security, run this:
+
+    wget http://sixarm.com/sixarm.pem
+    gem cert --add sixarm.pem && gem sources --add http://sixarm.com
+    gem install sixarm_ruby_defining -v ">= 1.1.1, < 2" --trust-policy HighSecurity
+
+To require the gem in your code:
 
     require "sixarm_ruby_defining"
 
-
-## Install with security (optional)
-
-To enable high security for all our gems:
-
-    wget http://sixarm.com/sixarm.pem
-    gem cert --add sixarm.pem
-    gem sources --add http://sixarm.com
-
-To install with high security:
-
-    gem install sixarm_ruby_defining --trust-policy HighSecurity
+<!--INSTALL-SHUT-->
 
 
 ## Multiple method names
