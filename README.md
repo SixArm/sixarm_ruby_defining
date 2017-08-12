@@ -1,4 +1,4 @@
-# Ruby » <br> Class#defining and #redefining metaprogramming methods
+SixArm.com → Ruby → <br> Class#defining and #redefining metaprogramming methods
 
 * Doc: <http://sixarm.com/sixarm_ruby_defining/doc>
 * Gem: <http://rubygems.org/gems/sixarm_ruby_defining>
