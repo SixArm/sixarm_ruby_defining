@@ -3,7 +3,7 @@
 Gem::Specification.new do |s|
 
   s.name              = "sixarm_ruby_defining"
-  s.summary           = "SixArm.com » Ruby » Class#defining and Class#redfining"
+  s.summary           = "SixArm.com → Ruby → Class#defining and Class#redfining"
   s.description       = "Class#defining and Class#redfining methods that detect if you're creating a class method, or overriding a class method"
   s.version           = "1.1.1"
 
