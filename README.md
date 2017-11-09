@@ -3,7 +3,7 @@
 * Doc: <http://sixarm.com/sixarm_ruby_defining/doc>
 * Gem: <http://rubygems.org/gems/sixarm_ruby_defining>
 * Repo: <http://github.com/sixarm/sixarm_ruby_defining>
-<!--HEADER-SHUT-->
+<!--header-shut-->
 
 
 ## Introduction
@@ -46,7 +46,7 @@ Want to help? We're happy to get pull requests.
 
 
 
-<!--INSTALL-OPEN-->
+<!--install-opent-->
 
 ## Install
 
@@ -66,7 +66,7 @@ To require the gem in your code:
 
     require 'sixarm_ruby_defining'
 
-<!--INSTALL-SHUT-->
+<!--install-shut-->
 
 
 ## Multiple method names
