@@ -46,17 +46,19 @@ Want to help? We're happy to get pull requests.
 
 
 
-<!--install-opent-->
+<!--install-open-->
 
 ## Install
 
 ### Gem
 
-Run this command in your shell or terminal:
+To install this gem in your shell or terminal:
 
     gem install sixarm_ruby_defining
 
-Or add this to your Gemfile:
+### Gemfile
+
+To add this gem to your Gemfile:
 
     gem 'sixarm_ruby_defining'
 
